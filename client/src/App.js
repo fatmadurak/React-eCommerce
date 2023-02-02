@@ -10,7 +10,7 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Signin from "./Pages/Auth/Signin";
 import Signup from "./Pages/Auth/SignUp";
-
+import Products from "./Pages/Products";
 
 
  function App() {
@@ -21,7 +21,7 @@ import Signup from "./Pages/Auth/SignUp";
       <Navbar/>
       <div className="content">  
         <Routes>
-          <Route path="/" exact element={<Home/>}/>
+          <Route path="/" exact element={<Products/>}/>
           <Route path="/signin" exact element={<Signin/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
         </Routes>
@@ -31,10 +31,7 @@ import Signup from "./Pages/Auth/SignUp";
   );
 }
 
-function Home(){
 
-  return <h1>Home</h1>
-}
 
 
 export default App;
