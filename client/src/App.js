@@ -1,39 +1,41 @@
-import {BrowserRoutes as Router,Switch,Route} from "react-router-dom"
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
+import Home from "./components/Home";
 
 
-function App() {
+
+ function App() {
   return (
-  <Router>
-    <div>
-      
-    <switch>
+    <>
+    <Router>
 
-    <Route path="/" exact component={Home}/>
-
-
-
-    </switch>
-
-
-
-    </div>
-
-
-
-
-
-  </Router>
+      <div>
+        
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </nav>
+   
+        <Routes>
+          <Route path="/" exact element={<Home/>}/>
+        </Routes>
+        </div>
+    </Router>
+    </>
   );
 }
 
-function Home(){
 
-  return
-  <h2>Home</h2>
- 
- }
- 
+
 export default App;
 
 
