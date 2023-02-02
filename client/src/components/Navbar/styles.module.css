@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom:1px solid rebeccapurple;
+    border-bottom:1px solid #e2e8f0;
     
 }
 
@@ -11,17 +11,24 @@
 
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 15px;
    
 
 }
 
 
-nav ul li a{
+.nav .menu ul li a{
 
-color: black;
+color: purple;
 text-decoration: none;
-padding: 40px;
+padding: 50px;
+
+}
+
+.nav .menu ul li a:hover{
+
+color: #000;
+
 
 }
 
@@ -29,4 +36,7 @@ padding: 40px;
 
     display: flex;
     align-items: center;
+    margin-right: 10px;
+    gap: 5px;
+
 }

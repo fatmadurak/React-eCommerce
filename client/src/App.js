@@ -8,6 +8,8 @@ import {
 import './App.css';
 
 import Navbar from "./components/Navbar";
+import Signin from "./Pages/Auth/Signin";
+import Signup from "./Pages/Auth/SignUp";
 
 
 
@@ -15,10 +17,13 @@ import Navbar from "./components/Navbar";
   return (
     <>
     <Router>
-      <div>  
+    
       <Navbar/>
+      <div className="content">  
         <Routes>
           <Route path="/" exact element={<Home/>}/>
+          <Route path="/signin" exact element={<Signin/>}/>
+          <Route path="/signup" exact element={<Signup/>}/>
         </Routes>
         </div>
     </Router>
