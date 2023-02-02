@@ -2,11 +2,12 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
+
 } from "react-router-dom";
 import './App.css';
-import Home from "./components/Home";
+
+import Navbar from "./components/Navbar";
 
 
 
@@ -14,17 +15,8 @@ import Home from "./components/Home";
   return (
     <>
     <Router>
-
-      <div>
-        
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </nav>
-   
+      <div>  
+      <Navbar/>
         <Routes>
           <Route path="/" exact element={<Home/>}/>
         </Routes>
@@ -34,6 +26,10 @@ import Home from "./components/Home";
   );
 }
 
+function Home(){
+
+  return <h1>Home</h1>
+}
 
 
 export default App;
