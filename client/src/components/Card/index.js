@@ -2,12 +2,12 @@ import { Box,Image,Button } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Card() {
+function Card({item}) {
   return <Box p="5px" overflow="hidden" borderRadius="lg" borderWidth="1px"  >
 
    <Link to="#/">
 
-    <Image src='https://picsum.photos/id/237/600/400' alt='product'/>
+    <Image src={item.images[0]} alt='product' width={300} height={200}/>
     <Box p="5">
    
     <Box>
@@ -17,11 +17,11 @@ function Card() {
 
     <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
 
-    Macbook Pro
+    {item.title}
 
     </Box>
 
-    <Box>100 TL</Box>
+    <Box>{item.price}</Box>
     </Box>
    </Link>
 

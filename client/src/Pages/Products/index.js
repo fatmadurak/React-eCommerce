@@ -5,8 +5,8 @@ import {useQuery}from "react-query"
 
 function Products() {
 
-  const { isLoading, error, data } = useQuery('repoData', () =>
-  fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
+  const { isLoading, error, data } = useQuery('products', () =>
+  fetch('https://dummyjson.com/products').then(res =>
     res.json()
   )
 )
@@ -21,13 +21,15 @@ console.log("data",data)
 
     
 
-    <Grid templateColumns="repeat(3,1fr)" gap={2}>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <Grid templateColumns="repeat(5,1fr)" gap={2}>
+   
+       {
+
+             data.products.map((item) =>( <Card item={item}/>)
+          
+            )
+
+       }
 
     </Grid>
 
