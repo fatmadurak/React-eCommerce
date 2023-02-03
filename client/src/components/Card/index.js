@@ -1,6 +1,7 @@
 import { Box,Image,Button } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import moment from "moment"
 
 function Card({item}) {
   return <Box p="5px" overflow="hidden" borderRadius="lg" borderWidth="1px"  >
@@ -12,7 +13,7 @@ function Card({item}) {
    
     <Box>
    
-    02/02/2023
+    {moment(item.createdAt).format("DD/MM/YYYY")}
     </Box>
 
     <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
@@ -21,7 +22,7 @@ function Card({item}) {
 
     </Box>
 
-    <Box>{item.price}</Box>
+    <Box>{item.price}TL</Box>
     </Box>
    </Link>
 
