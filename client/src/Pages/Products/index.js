@@ -23,7 +23,7 @@ console.log("data",data)
    
        {
 
-             data.products.map((item) =>( <Card item={item}/>)
+             data.products.map((item,key) =>( <Card item={item} key={item.id}/>)
           
             )
 
