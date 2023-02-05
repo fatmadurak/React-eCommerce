@@ -6,7 +6,7 @@ import moment from "moment"
 function Card({item}) {
   return <Box p="5px" overflow="hidden" borderRadius="lg" borderWidth="1px"  >
 
-   <Link to="#/">
+   <Link to={`product/${item.id}`}>
 
     <Image src={item.images[0]} alt='product' width={300} height={200}/>
     <Box p="5">
