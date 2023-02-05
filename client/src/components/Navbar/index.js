@@ -9,7 +9,9 @@ function Navbar() {
     <nav className={Styles.nav}>
     <div className={Styles.left}>
        
-        <Link to="/">eCommerce</Link>
+       <div className={Styles.logo}>
+       <Link to="/">eCommerce</Link>
+       </div>
       
      <div className={Styles.menu}>
      <ul><li><Link to="/">Products</Link></li></ul>
