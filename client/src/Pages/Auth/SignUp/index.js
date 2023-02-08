@@ -1,7 +1,29 @@
 import React from 'react'
 import { Flex,Box,Heading,FormControl,FormLabel,Input,Button } from '@chakra-ui/react'
+import {useFormik} from "formik"
 
 function Signup() {
+
+   const formik=useFormik({
+
+    initialValues:{
+
+    email:"",
+    password:"",
+    passwordConfirm:"",
+       
+
+    },
+
+    onSubmit:async(values,bag)=>{
+
+   console.log(values)
+
+    }
+
+
+   })
+
   return (
     <div>
 
@@ -16,13 +38,13 @@ function Signup() {
 
      <Box my={5} textAlign="left">
 
-     <form onSubmit={()=>{}}>
+     <form onSubmit={formik.handleSubmit}>
 
      <FormControl>
 
     <FormLabel>E-mail</FormLabel>
 
-    <Input name='email'/>
+    <Input name='email' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email}/>
      </FormControl>
  
 
@@ -31,7 +53,7 @@ function Signup() {
 
     <FormLabel>Password</FormLabel>
 
-    <Input name='password' type="password"/>
+    <Input name='password' type="password" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password}/>
      </FormControl>
 
      
@@ -39,7 +61,7 @@ function Signup() {
 
     <FormLabel>Password Confirm</FormLabel>
 
-    <Input name='passwordConfirm' type="password"/>
+    <Input name='passwordConfirm' type="password" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.passwordConfirm}/>
      </FormControl>
 
      <Button mt="4"width="full" type='submit'>Sign Up</Button>
