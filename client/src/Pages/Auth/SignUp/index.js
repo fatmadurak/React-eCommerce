@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex,Box,Heading,FormControl,FormLabel,Input,Button } from '@chakra-ui/react'
 import {useFormik} from "formik"
 import validationSchema from './validations'
+import {fetchRegister} from "../../../Api"
 
 function Signup() {
 
@@ -19,9 +20,7 @@ function Signup() {
 
     onSubmit:async(values,bag)=>{
 
-   console.log(values)
-
- 
+     bag.resetForm();
 
     }
 
