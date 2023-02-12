@@ -4,7 +4,9 @@
   "description": "fake rest api",
   "main": "index.js",
   "scripts": {
-    "start:server":"json-server --watch api/Products.json"
+  
+    "start:server":"json-server --watch api/Users.json"
+
   },
   "keywords": [
     "rest",
