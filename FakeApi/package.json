@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
   
-    "start:server":"json-server --watch api/Users.json"
+    "start:server":"json-server --watch api/Data.json"
 
   },
   "keywords": [
