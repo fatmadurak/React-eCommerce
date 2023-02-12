@@ -3,6 +3,10 @@ import { Flex,Box,Heading,FormControl,FormLabel,Input,Button } from '@chakra-ui/
 import {useFormik} from "formik"
 import validationSchema from './validations'
 
+import {fetchRegister} from "../../../Api"
+
+
+
 
 function Signup() {
 
@@ -20,7 +24,19 @@ function Signup() {
 
     onSubmit:async(values,bag)=>{
 
-     bag.resetForm();
+    try{
+
+      const RegisterResponse=await fetchRegister({email:values.email,password:values.password})
+      console.log(RegisterResponse)
+
+    }
+    catch(e){
+
+
+
+    }
+
+  
 
     }
 
