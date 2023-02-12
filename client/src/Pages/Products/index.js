@@ -19,11 +19,11 @@ console.log("data",data)
 
     
 
-    <Grid templateColumns="repeat(4,1fr)" gap={2}>
+    <Grid templateColumns="repeat(3,1fr)" gap={2}>
    
        {
 
-             data.products.map((item,key) =>( <Card item={item} key={item.id}/>)
+             data.map((item,key) =>( <Card item={item} key={item.id}/>)
           
             )
 
