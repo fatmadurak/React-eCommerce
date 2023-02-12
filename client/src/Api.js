@@ -1,5 +1,9 @@
 
 import axios from "axios"
+
+
+
+
 export const fetchProducts=async()=>{
 
 const {data}= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}`)
@@ -17,9 +21,7 @@ export const fetchProduct=async(id)=>{
     return data;
     
     
-    
     }
-
 
 
 
