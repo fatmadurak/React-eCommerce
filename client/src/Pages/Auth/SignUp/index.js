@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex,Box,Heading,FormControl,FormLabel,Input,Button } from '@chakra-ui/react'
+import { Flex,Box,Heading,FormControl,FormLabel,Input,Button,Alert } from '@chakra-ui/react'
 import {useFormik} from "formik"
 import validationSchema from './validations'
 
@@ -33,6 +33,7 @@ function Signup() {
     catch(e){
 
 
+      bag.setErrors({general:e.response.data.message})
 
     }
 
@@ -52,6 +53,11 @@ function Signup() {
    
      <Box textAlign="center">
       <Heading>Sign Up</Heading>
+
+     </Box>
+     <Box my={5}>
+ 
+  {  formik.errors.general && (<Alert status='error'> {formik.errors.general}</Alert>)}
 
      </Box>
 

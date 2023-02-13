@@ -241,27 +241,27 @@
     {
       "id": 1,
       "email": "atuny0@sohu.com",
-      "password": "9uQFF1Lh"
+      "password": "9uQFF1Lh",
+      "role": "user"
     },
     {
       "id": 2,
       "email": "test@sohu.com",
-      "password": "123245"
+      "password": "123245",
+      "role": "user"
     },
     {
       "id": 3,
       "email": "test2@sohu.com",
-      "password": "45468"
+      "password": "45468",
+      "role": "user"
     },
     {
       "email": "alchemistalker@gmail.com",
       "password": "123456",
-      "id": 4
-    },
-    {
-      "email": "fatmabadillidurak@gmail.com",
-      "password": "12345",
-      "id": 5
+      "id": 4,
+      "role": "user"
     }
+  
   ]
 }
