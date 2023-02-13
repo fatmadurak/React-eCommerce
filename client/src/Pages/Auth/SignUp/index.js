@@ -5,10 +5,14 @@ import validationSchema from './validations'
 
 import {fetchRegister} from "../../../Api"
 
+import {useAuth} from "../../../contexts/AuthContext"
+
 
 
 
 function Signup() {
+
+  const{login}=useAuth()
 
    const formik=useFormik({
 
