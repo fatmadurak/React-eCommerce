@@ -15,7 +15,7 @@ export  const AuthProvider=({children})=>{
     const login=(data)=>{
 
      setLoggedIn(true)
-     setUser(data.user);
+     setUser(data);
     }
 
     const values={

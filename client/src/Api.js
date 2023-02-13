@@ -31,7 +31,7 @@ export const fetchProduct=async(id)=>{
         return data;
         
         
-        }
+ }
 
 
 
