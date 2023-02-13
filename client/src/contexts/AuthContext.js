@@ -5,7 +5,7 @@ import { createContext,useContext,useState,useEffect, } from "react";
  const AuthContext=createContext();
 
 
-export  const AuthProvider=(children)=>{
+export  const AuthProvider=({children})=>{
 
     const[user,setUser]=useState(null);
 
@@ -14,8 +14,8 @@ export  const AuthProvider=(children)=>{
 
     const login=(data)=>{
 
-     setLoggin(true)
-     setUser(data);
+     setLoggedIn(true)
+     setUser(data.user);
     }
 
     const values={

@@ -261,7 +261,36 @@
       "password": "123456",
       "id": 4,
       "role": "user"
+    },
+    {
+      "email": "yusufdurak105@gmail.com",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "email": "alchemistalker@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "email": "alchemistalker@gmail.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "email": "alchemistalk@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "fatmabadillidurak@gmail.com",
+      "password": "12345",
+      "id": 9
+    },
+    {
+      "email": "yusufdurak105@gmail.com",
+      "password": "12345",
+      "id": 10
     }
-  
   ]
 }
