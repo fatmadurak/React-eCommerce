@@ -32,10 +32,6 @@ function Signup() {
 
       const RegisterResponse=await fetchRegister({email:values.email,password:values.password})
 
-      
-
-    
-
       login(RegisterResponse)
    
 

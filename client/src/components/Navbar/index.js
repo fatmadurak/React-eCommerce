@@ -42,7 +42,7 @@ function Navbar() {
     loggedIn && (
 
    <>
-   <Link to="/profile"> <Button colorScheme='pink'>Profile</Button></Link>
+   <Link to="/profile"> <Button type='submit'>Profile</Button></Link>
    
    </>
 
