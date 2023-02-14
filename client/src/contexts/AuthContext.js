@@ -1,12 +1,12 @@
 import { createContext,useContext,useState,useEffect, } from "react";
 import { fetchMe } from "../Api";
-
+import { Flex,Spinner } from '@chakra-ui/react'
 
 
  const AuthContext=createContext();
 
 
-export  const AuthProvider=({children})=>{
+  const AuthProvider=({children})=>{
 
     const[user,setUser]=useState(null);
 
@@ -24,13 +24,13 @@ export  const AuthProvider=({children})=>{
      try {
 
         const loginData = JSON.parse(localStorage.getItem("loginData"));
-        const me=fetchMe();
+        const me = await fetchMe();
 
 
         if (loginData !== null) {
             const newMe = me.find((item) => item.email === loginData.email);
             setLoggedIn(true);
-            setUser(me);
+            setUser(newMe);
           }
           // setUser(me);
           setLoading(false);
@@ -54,6 +54,7 @@ export  const AuthProvider=({children})=>{
 
      setLoggedIn(true)
      setUser(data);
+     localStorage.setItem("loginData", JSON.stringify(data));
     }
 
     const values={
