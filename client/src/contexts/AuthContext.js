@@ -22,6 +22,7 @@ export  const AuthProvider=({children})=>{
        const me=fetchMe();
 
        setLoggedIn(true);
+       setUser(me);
       
 
 
