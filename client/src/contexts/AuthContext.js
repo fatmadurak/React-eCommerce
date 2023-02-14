@@ -66,8 +66,6 @@ import { Flex,Spinner } from '@chakra-ui/react'
 
     }
 
- 
-
     if (loading) {
         return (
           <Flex justifyContent="center" alignItems="center" height="100vh">
