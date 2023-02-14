@@ -34,4 +34,13 @@ export const fetchProduct=async(id)=>{
  }
 
 
+ export const fetchMe=async()=>{
+
+ const {data}=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)
+
+ return data;
+
+ }
+
+
 

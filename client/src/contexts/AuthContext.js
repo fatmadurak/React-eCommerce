@@ -1,4 +1,5 @@
 import { createContext,useContext,useState,useEffect, } from "react";
+import { fetchMe } from "../Api";
 
 
 
@@ -10,6 +11,27 @@ export  const AuthProvider=({children})=>{
     const[user,setUser]=useState(null);
 
     const[loggedIn,setLoggedIn]=useState(false);
+
+
+   useEffect(()=>{
+
+
+     (async()=>{
+
+
+       const me=fetchMe();
+
+       setLoggedIn(true);
+      
+
+
+
+     })()
+
+
+
+   })
+
 
 
     const login=(data)=>{
