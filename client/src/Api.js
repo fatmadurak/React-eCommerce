@@ -43,4 +43,14 @@ export const fetchProduct=async(id)=>{
  }
 
 
+ export const fetchLogout=async()=>{
+
+const {data}= await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)
+
+return data;
+
+ }
+
+
+
 

@@ -1,5 +1,5 @@
 import { createContext,useContext,useState,useEffect, } from "react";
-import { fetchMe } from "../Api";
+import { fetchLogout, fetchMe } from "../Api";
 import { Flex,Spinner } from '@chakra-ui/react'
 
 
@@ -57,11 +57,25 @@ import { Flex,Spinner } from '@chakra-ui/react'
      localStorage.setItem("loginData", JSON.stringify(data));
     }
 
+
+    const logout=async(callback)=>{
+   
+    setLoggedIn(false)
+    setUser(null)
+    localStorage.removeItem("loginData")
+    await fetchLogout();
+    callback();
+
+
+
+    }
+
     const values={
 
         loggedIn,
         user,
         login,
+        logout,
       
 
     }

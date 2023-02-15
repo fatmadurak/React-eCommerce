@@ -1,10 +1,23 @@
 import React from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-import {Text} from "@chakra-ui/react"
+import {Text,Button} from "@chakra-ui/react"
 
-function Profile() {
+function Profile({history}) {
 
-    const {user}=useAuth();
+    const {user,logout}=useAuth();
+
+    const handleLogout=async()=>{
+
+  
+         logout(()=>{
+
+          history.push("/")
+
+         });
+
+
+    }
+
   return (
     <div>
   
@@ -13,6 +26,11 @@ function Profile() {
     <Text fontSize="22">Profile</Text>
     {JSON.stringify(user)}
 
+     <br/>
+     <br/>
+     <br/>
+
+    <Button colorScheme="pink" variant="solid" onClick={handleLogout}>Logout</Button>
     </code>
 
 
