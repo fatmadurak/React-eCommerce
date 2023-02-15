@@ -12,6 +12,7 @@ import Signin from "./Pages/Auth/Signin";
 import Signup from "./Pages/Auth/SignUp";
 import Products from "./Pages/Products";
 import ProductDetails from "./Pages/ProductDetails/index"
+import Profile from "./Pages/Profile";
 
 
  function App() {
@@ -26,6 +27,7 @@ import ProductDetails from "./Pages/ProductDetails/index"
           <Route path="/product/:product_id" exact element={<ProductDetails/>}/>
           <Route path="/signin" exact element={<Signin/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
+          <Route path="/profile" exact element={<Profile/>}/>
         </Routes>
         </div>
     </Router>
