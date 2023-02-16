@@ -13,6 +13,7 @@ import Signup from "./Pages/Auth/SignUp";
 import Products from "./Pages/Products";
 import ProductDetails from "./Pages/ProductDetails/index"
 import Profile from "./Pages/Profile";
+import ProtectedRoute from "./Pages/ProtectedRoute";
 
 
  function App() {
@@ -28,6 +29,7 @@ import Profile from "./Pages/Profile";
           <Route path="/signin" exact element={<Signin/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
           <Route path="/profile" exact element={<Profile/>}/>
+          <ProtectedRoute path="/profile" exact element={<Profile/>} />
         </Routes>
         </div>
     </Router>
