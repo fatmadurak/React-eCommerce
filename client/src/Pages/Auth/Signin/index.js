@@ -91,7 +91,7 @@ function Signin() {
      
   
 
-     <Button mt="4"width="full" type='submit'>Sign In</Button>
+     <Button mt="4"width="full" type='submit'>Signin</Button>
      
 
      </form>
