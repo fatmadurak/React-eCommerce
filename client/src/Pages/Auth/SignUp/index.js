@@ -7,10 +7,14 @@ import {fetchRegister} from "../../../Api"
 
 import {useAuth} from "../../../contexts/AuthContext"
 
+import { useNavigate } from 'react-router-dom'
+
 
 
 
 function Signup() {
+
+  const {navigate}=useNavigate();
 
   const{login}=useAuth()
 
@@ -34,6 +38,7 @@ function Signup() {
 
       login(RegisterResponse)
    
+      navigate("/profile")
 
     }
     catch(e){
