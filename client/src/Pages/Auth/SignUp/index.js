@@ -9,12 +9,14 @@ import {useAuth} from "../../../contexts/AuthContext"
 
 import { useNavigate } from 'react-router-dom'
 
+import { controllerUserMail } from '../../../Api'
+
 
 
 
 function Signup() {
 
-  const {navigate}=useNavigate();
+  const navigate=useNavigate();
 
   const{login}=useAuth()
 
@@ -28,32 +30,29 @@ function Signup() {
        
 
     },
+   
+
+    onSubmit: async (values, bag) => {
+
+      const checkUserMail = await controllerUserMail(values.email);
+
+      if (checkUserMail !== undefined) {
+        return bag.setErrors({ email: 'Bu e-mail adresi ile kayıt olunmuştur.' });
+      } else {
+        const registerResponse = await fetchRegister({
+          role: "user",
+          email: values.email,
+          password: values.password,
+        });
+
+        login(registerResponse);
+        navigate("/profile");
+        console.log("sign up:", registerResponse);
+      }
+    },
     validationSchema,
 
-    onSubmit:async(values,bag)=>{
-
-    try{
-
-      const RegisterResponse=await fetchRegister({email:values.email,password:values.password})
-
-      login(RegisterResponse)
-   
-      navigate("/profile")
-
-    }
-    catch(e){
-
-
-      bag.setErrors({general:e.response.data.message})
-
-    }
-
-  
-
-    }
-
-
-   })
+  });
 
   return (
     <div>

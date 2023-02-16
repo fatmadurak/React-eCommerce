@@ -29,7 +29,14 @@ import ProtectedRoute from "./Pages/ProtectedRoute";
           <Route path="/signin" exact element={<Signin/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
           <Route path="/profile" exact element={<Profile/>}/>
-          <ProtectedRoute path="/profile" exact element={<Profile/>} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         </div>
     </Router>

@@ -1,19 +1,12 @@
-import { Route,Redirect} from "react-router-dom"
+import { Navigate} from "react-router-dom"
 import { useAuth } from "../contexts/AuthContext"
 
-function ProtectedRoute({component:Component,...rest}) {
+function ProtectedRoute({children}) {
 
     const {loggedIn}=useAuth();
-  return 
-  <Route  {...rest} render={(props)=>{
-
- if (loggedIn) {
-    return <Component {...props}/>
- }
-
- return <Redirect to={{pathname:"/"}}/>
-     
-  }}/>
+    
+    return loggedIn ? children : <Navigate to="/" />
+  
  
   
 }

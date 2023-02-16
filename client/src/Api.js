@@ -51,6 +51,34 @@ return data;
 
  }
 
+ 
+
+export const getAllUsers = async () => {
+    const { data } = await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/users`);
+
+    return data;
+}
+
+export const controllerUserMail = async (mail) => {
+ 
+    const allUser = await getAllUsers();
+
+ 
+    return allUser.find(user => user.email === mail);
+
+};
 
 
+export const fetchLogin = async (email) => {
+    const allUser = await getAllUsers();
+    const user = allUser.find((item) => item.email === email);
+    console.log("api", user)
+    return user;
+}
+
+export const controllerUserPassword = async (password) => {
+    const allUser = await getAllUsers();
+
+    return allUser.find(user => user.password === password);
+}
 

@@ -268,81 +268,22 @@
       "id": 5
     },
     {
-      "email": "alchemistalker@gmail.com",
-      "password": "123456",
+      "role": "user",
+      "email": "fatmabadillidurak@gmail.com",
+      "password": "12345",
       "id": 6
     },
     {
-      "email": "alchemistalker@gmail.com",
-      "password": "123456",
       "id": 7
     },
     {
-      "email": "alchemistalk@gmail.com",
-      "password": "123456",
+      "role": "user",
+      "email": "yusuf1durak105@gmail.com",
+      "password": "12345",
       "id": 8
     },
     {
-      "email": "fatmabadillidurak@gmail.com",
-      "password": "12345",
       "id": 9
-    },
-    {
-      "email": "yusufdurak105@gmail.com",
-      "password": "12345",
-      "id": 10
-    },
-    {
-      "email": "fatmabadillidurak@gmail.com",
-      "password": "12345",
-      "id": 11
-    },
-    {
-      "email": "usamedurak96@gmail.com",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "email": "fatmabadillidurak@gmail.com",
-      "password": "1234569",
-      "id": 13
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "12345",
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "email": "yusufdurak105@gmail.com",
-      "password": "12345",
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "email": "alchemistalker@gmail.com",
-      "password": "12345",
-      "id": 19
-    },
-    {
-      "email": "alchemistalker@gmail.com",
-      "password": "12345",
-      "id": 20
-    },
-    {
-      "email": "teste@gmail.com",
-      "password": "12345",
-      "id": 21
-    },
-    {
-      "id": 22
     }
   ]
 }
