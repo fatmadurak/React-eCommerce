@@ -28,7 +28,10 @@ function ProductDetails() {
    
     <div>
       
-        <Button colorScheme={findItem ? "green":"pink"} onClick={()=>AddToBasket(data,findItem)}>{findItem ? 'Remove from basket':'Add to basket'}</Button>
+        <Button colorScheme={findItem ? "green":"pink"} onClick={()=>AddToBasket(data,findItem)}>
+          {findItem ? "Remove from basket":"Add to basket"}
+          
+        </Button>
 
 
         <Text mt={3}>{data.title}</Text>

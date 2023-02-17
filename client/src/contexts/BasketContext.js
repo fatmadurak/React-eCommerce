@@ -3,9 +3,12 @@ import {createContext,useContext,useState,useEffect} from "react"
 
 const BasketContext = createContext();
 
+
 const BasketProvider=({children})=>{
     
 const [items,setItems]=useState([]);
+
+
 
 const AddToBasket=(data,findItem)=>{
 
@@ -16,7 +19,7 @@ const AddToBasket=(data,findItem)=>{
 
     }
     
-   const filtered= items.filter((item)=>item.id!==findItem.id)
+   const filtered= items.filter((item)=>item._id!==findItem._id)
     setItems(filtered)
     }
 
