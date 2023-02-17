@@ -19,7 +19,7 @@ const AddToBasket=(data,findItem)=>{
 
     }
     
-   const filtered= items.filter((item)=>item._id!==findItem._id)
+   const filtered= items.filter((item)=>item.id!==findItem.id)
     setItems(filtered)
     }
 

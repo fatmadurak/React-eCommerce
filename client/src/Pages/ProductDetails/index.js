@@ -21,7 +21,7 @@ function ProductDetails() {
  
     if (error) return 'An error has occurred: ' + error.message
 
-    const findItem=items.find((item)=>item._id===product_id)
+    const findItem=items.find((item)=>item._id===data._id)
     const images =data.images.map((url)=>({original:url}))
     
   return (
