@@ -11,19 +11,22 @@ import { useBasket } from '../../contexts/BasketContext'
 function ProductDetails() {
     const {product_id}=useParams();
 
-    const{items,addToBasket}=useBasket();
-    const findItem=items.find((item)=>item.id===product_id)
+    const{items}=useBasket();
+    
+   
+
     const { isLoading, error, data } = useQuery(["products",product_id], () =>fetchProduct(product_id))
     if (isLoading) return 'Loading...'
  
     if (error) return 'An error has occurred: ' + error.message
 
+    
     const images =data.images.map((url)=>({original:url}))
-
+  
   return (
    
     <div>
-        <Button colorScheme={findItem?"green":"pink"} onClick={()=>addToBasket(data,findItem)}>{findItem ? "Remove to Basket":"Add to Basket"}</Button>
+        <Button colorScheme="pink" >Add to basket</Button>
         <Text mt={3}>{data.title}</Text>
        <Text> {moment(data.createdAt).format("DD/MM/YYYY")}</Text>
         <p>{data.description}</p>

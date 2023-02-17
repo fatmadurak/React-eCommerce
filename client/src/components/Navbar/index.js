@@ -9,10 +9,9 @@ import { useBasket } from '../../contexts/BasketContext'
 function Navbar() {
 
   const{loggedIn}=useAuth();
-  const{items}=useBasket();
+  const{ items }=useBasket();
 
-
-  console.log(loggedIn) 
+ 
 
 
   return (
@@ -39,26 +38,30 @@ function Navbar() {
 
 
 
-   }
-
+   } <>
+    <Link to="/basket"> <Button colorScheme="pink" variant="outline">Basket{`items.length>0 && ${items.length}`}</Button></Link>
+    </>
    {
     
+
+
     loggedIn && (
 
-   <>
+  
+      <>  
+ 
+         
 
-    
-     
-   <Link to="/basket"> <Button colorScheme="pink">Basket{items.legth>0 && `${items.legth}`}</Button></Link>
-
+  
    <Link to="/profile"> <Button type='submit'>Profile</Button></Link>
    
+ 
    </>
-
     )
-
+ 
 
    }
+    
     
    
     
