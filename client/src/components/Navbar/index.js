@@ -12,6 +12,7 @@ function Navbar() {
   const{ items }=useBasket();
 
  
+ 
 
 
   return (
@@ -34,37 +35,23 @@ function Navbar() {
       
       <Link to="/signin"> <Button colorScheme='pink'>Login</Button></Link>
       <Link to="signup"><Button colorScheme='pink'>Register</Button></Link></>)
-
-
-
-
-   } <>
-    <Link to="/basket"> <Button colorScheme="pink" variant="outline">Basket{`items.length>0 && ${items.length}`}</Button></Link>
-    </>
+   }    
    {
     
 
-
     loggedIn && (
-
-  
       <>  
- 
-         
 
-  
+      {items.length > 0 && (
+
+        <Link to="/basket"> <Button colorScheme="pink" variant="outline">Basket({items.length})</Button></Link>
+      )}
+
+
    <Link to="/profile"> <Button type='submit'>Profile</Button></Link>
-   
- 
    </>
     )
- 
-
    }
-    
-    
-   
-    
     </div>
      
   </nav>
