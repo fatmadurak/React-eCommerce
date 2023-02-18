@@ -28,8 +28,9 @@ function Basket() {
 
                 <li key={item.id}>
 
-                  <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL</Link>
+                  <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
                   <Image htmlWidth={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
+                  </Link>
                   <Button colorScheme="pink" mt={3}> Remove from basket</Button>
                 </li>
               ))
