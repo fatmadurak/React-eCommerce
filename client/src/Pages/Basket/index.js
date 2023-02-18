@@ -1,6 +1,6 @@
 import React from 'react'
 import {useBasket} from "../../contexts/BasketContext"
-import {Alert,Button,Image,Box} from "@chakra-ui/react"
+import {Alert,Button,Image,Box,Text} from "@chakra-ui/react"
 import {Link} from  "react-router-dom"
 function Basket() {
 
@@ -30,7 +30,7 @@ function Basket() {
                 <li key={item.id}>
 
                   <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
-                  <Image htmlWidth={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
+                  <Image htmlWidth={300} htmlHeight={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
                   </Link>
                   <Button colorScheme="pink" size={'md'}   mt={3}> Remove from basket</Button>
                 </li>
@@ -49,7 +49,7 @@ function Basket() {
 
       <Box mt={10}>
         
-        Total:{total}
+       <Text fontSize={22}> Total:{total}</Text>
 
       </Box>
 
