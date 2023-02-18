@@ -1,10 +1,11 @@
 import React from 'react'
 import {useBasket} from "../../contexts/BasketContext"
-import {Alert,Button,Image} from "@chakra-ui/react"
+import {Alert,Button,Image,Box} from "@chakra-ui/react"
 import {Link} from  "react-router-dom"
 function Basket() {
 
   const {items}=useBasket();
+  const total=items.reduce((acc,obj)=>acc+obj.price,0)
   return (
     <div>
 
@@ -31,7 +32,7 @@ function Basket() {
                   <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
                   <Image htmlWidth={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
                   </Link>
-                  <Button colorScheme="pink" mt={3}> Remove from basket</Button>
+                  <Button colorScheme="pink" size={'md'}   mt={3}> Remove from basket</Button>
                 </li>
               ))
              
@@ -46,7 +47,11 @@ function Basket() {
        )
      }
 
+      <Box mt={10}>
+        
+        Total:{total}
 
+      </Box>
 
 
     </div>
