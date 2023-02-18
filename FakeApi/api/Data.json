@@ -275,6 +275,21 @@
     },
     {
       "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "role": "user",
+      "email": "fatmabadillidurak86@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
     }
   ]
 }
