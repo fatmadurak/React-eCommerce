@@ -82,3 +82,13 @@ export const controllerUserPassword = async (password) => {
     return allUser.find(user => user.password === password);
 }
 
+
+
+export const postOrder=async(input)=>{
+
+
+const data= await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/orders`,input)
+
+return data;
+
+}

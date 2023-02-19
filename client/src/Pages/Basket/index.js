@@ -7,7 +7,10 @@ import {Alert,Button,Image,Box,Text,  Modal,
   ModalFooter,
   ModalBody,
   ModalCloseButton,useDisclosure,FormControl,FormLabel,Textarea} from "@chakra-ui/react"
-import {Link} from  "react-router-dom"
+ 
+import {json, Link} from  "react-router-dom"
+
+import { postOrder } from '../../Api'
 function Basket() {
 
   const[address,setAddress]=useState("")
@@ -19,8 +22,25 @@ function Basket() {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
 
-  const {items}=useBasket();
+  const {items,removeFromBasket}=useBasket();
   const total=items.reduce((acc,obj)=>acc+obj.price,0)
+
+  const handleSubmit=()=>{
+
+   const item_id=items.map((item)=>item.id)
+
+   const input={
+
+    address,
+    items:JSON.stringify(item_id)
+
+   }
+
+   const response= postOrder(input)
+   console.log(response)
+
+  }
+
   return (
     <div>
 
@@ -47,7 +67,7 @@ function Basket() {
                   <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
                   <Image htmlWidth={300} htmlHeight={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
                   </Link>
-                  <Button colorScheme="pink" size={'md'}   mt={3}> Remove from basket</Button>
+                  <Button colorScheme="pink" size={'md'}   mt={3} onClick={()=>removeFromBasket(item.id)}> Remove from basket</Button>
                 </li>
               ))
              
@@ -90,7 +110,7 @@ function Basket() {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
+            <Button colorScheme='blue' mr={3} onClick={handleSubmit}>
               Save
             </Button>
             <Button onClick={onClose}>Cancel</Button>
