@@ -16,7 +16,7 @@ import Profile from "./Pages/Profile";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 import Basket from "./Pages/Basket";
 import Error404 from "./Pages/Error/Error404";
-
+import Admin from "./Pages/Admin";
 
  function App() {
   return (
@@ -38,6 +38,15 @@ import Error404 from "./Pages/Error/Error404";
             element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            }
+          />
+                <Route
+            path="/admin"
+            admin={true}
+            element={
+              <ProtectedRoute>
+                <Admin />
               </ProtectedRoute>
             }
           />

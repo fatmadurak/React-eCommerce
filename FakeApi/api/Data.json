@@ -293,13 +293,37 @@
     },
     {
       "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "role": "admin",
+      "email": "admin@admin.com",
+      "password": "12345",
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
     }
   ],
   "orders": [
     {
       "id": 1,
       "adress": "Karaköprü/Şanlıurfa"
+    },
+    {
+      "address": "122345",
+      "items": "[3,1]",
+      "id": 2
+    },
+    {
+      "address": "1223456",
+      "items": "[3,1]",
+      "id": 3
     }
-   
   ]
 }
