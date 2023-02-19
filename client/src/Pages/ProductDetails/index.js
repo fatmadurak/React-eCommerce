@@ -10,7 +10,7 @@ import { useBasket } from '../../contexts/BasketContext'
 
 function ProductDetails() {
     const {product_id}=useParams();
-    console.log(product_id)
+
     const{items,AddToBasket}=useBasket();
 
     

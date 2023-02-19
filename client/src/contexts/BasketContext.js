@@ -18,11 +18,8 @@ const AddToBasket=(data,findItem)=>{
 
     if (!findItem) {
     
-      const newItems= setItems((items)=>([...items,data]))
+      return setItems((items)=>([...items,data]))
 
-      return newItems;
-      
-      
 
     }
     
