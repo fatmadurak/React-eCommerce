@@ -15,7 +15,7 @@ import ProductDetails from "./Pages/ProductDetails/index"
 import Profile from "./Pages/Profile";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 import Basket from "./Pages/Basket";
-import Error404 from "./Pages/Error404";
+import Error404 from "./Pages/Error/Error404";
 
 
  function App() {
