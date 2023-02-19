@@ -44,7 +44,7 @@ function Signin() {
         bag.setErrors({password :"E-mail veya parola hatalı"});
       } else {
         const loginResponse = await fetchLogin(values.email);                     
-            console.log("signin response:", loginResponse);
+            
             login(loginResponse);
             navigate("/profile");                  
     }   

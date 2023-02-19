@@ -72,7 +72,7 @@ export const controllerUserMail = async (mail) => {
 export const fetchLogin = async (email) => {
     const allUser = await getAllUsers();
     const user = allUser.find((item) => item.email === email);
-    console.log("api", user)
+    
     return user;
 }
 

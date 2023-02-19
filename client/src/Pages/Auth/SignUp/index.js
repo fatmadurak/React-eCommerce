@@ -47,7 +47,7 @@ function Signup() {
 
         login(registerResponse);
         navigate("/profile");
-        console.log("sign up:", registerResponse);
+        
       }
     },
     validationSchema,
