@@ -299,16 +299,7 @@
     {
       "id": 1,
       "adress": "Karaköprü/Şanlıurfa"
-    },
-    {
-      "address": "xfvbgchc",
-      "items": "[1]",
-      "id": 2
-    },
-    {
-      "address": "ABCD",
-      "items": "[3,1]",
-      "id": 3
     }
+   
   ]
 }

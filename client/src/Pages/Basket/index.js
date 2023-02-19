@@ -6,7 +6,7 @@ import {Alert,Button,Image,Box,Text,  Modal,
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,useDisclosure,FormControl,FormLabel,Textarea} from "@chakra-ui/react"
+  ModalCloseButton,useDisclosure,FormControl,FormLabel,Textarea,  useToast,} from "@chakra-ui/react"
  
 import {Link} from  "react-router-dom"
 
@@ -21,6 +21,7 @@ function Basket() {
 
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
+  const toast = useToast();
 
   const {items,removeFromBasket,emptyBasket}=useBasket();
   const total=items.reduce((acc,obj)=>acc+obj.price,0)
@@ -35,12 +36,24 @@ function Basket() {
     items:JSON.stringify(item_id)
 
    }
-
    postOrder(input)
    emptyBasket();
-   onClose();
+   onClose(
+    toast({
+      title: `Siparişiniz Alındı!`,
+      description: "En kısa sürede kargoya verilecektir.",
+      status: "success",
+      duration: 6000,
+      isClosable: true,
+      position: "top",
+    })
+  );
+
 
   }
+
+
+ 
 
   return (
     <div>
