@@ -3,11 +3,11 @@ import {createContext,useContext,useState,useEffect} from "react"
 
 const BasketContext = createContext();
 
-
+const defaultBasket = JSON.parse(localStorage.getItem("basket")) || [];
 
 const BasketProvider=({children})=>{
     
-const [items,setItems]=useState([]);
+const [items,setItems]=useState(defaultBasket);
 
 
 useEffect(() => {
