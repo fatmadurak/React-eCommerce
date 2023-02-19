@@ -8,22 +8,20 @@ const BasketContext = createContext();
 const BasketProvider=({children})=>{
     
 const [items,setItems]=useState([]);
-const defaultItems= items >0  && JSON.parse("basket",localStorage.getItem("basketdata")) || []
-
-useEffect(()=>{
 
 
- localStorage.setItem("basket",JSON.stringify("basketdata"))
-
-
-
-},[items])
+useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(items));
+  }, [items]);
 
 const AddToBasket=(data,findItem)=>{
 
     if (!findItem) {
     
-        return setItems((items)=>[data,...items])
+      const newItems= setItems((items)=>([...items,data]))
+
+      return newItems;
+      
       
 
     }
