@@ -76,12 +76,12 @@ function Basket() {
             {
               items.map((item)=>(
 
-                <li key={item._id}>
+                <li key={item.id}>
 
                   <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
                   <Image htmlWidth={300} htmlHeight={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
                   </Link>
-                  <Button colorScheme="pink" size={'md'}   mt={3} onClick={()=>removeFromBasket(item._id)}> Remove from basket</Button>
+                  <Button colorScheme="pink" size={'md'}   mt={3} onClick={()=>removeFromBasket(item.id)}> Remove from basket</Button>
                 </li>
               ))
              
