@@ -40,6 +40,7 @@ function Basket() {
             }
             </ul>
          
+        
          
          
          </>
@@ -53,6 +54,7 @@ function Basket() {
 
       </Box>
 
+      <Button mt={5} colorScheme="green" >Order</Button>
 
     </div>
   )
