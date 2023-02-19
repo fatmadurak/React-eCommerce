@@ -8,7 +8,7 @@ import {Alert,Button,Image,Box,Text,  Modal,
   ModalBody,
   ModalCloseButton,useDisclosure,FormControl,FormLabel,Textarea} from "@chakra-ui/react"
  
-import {json, Link} from  "react-router-dom"
+import {Link} from  "react-router-dom"
 
 import { postOrder } from '../../Api'
 function Basket() {
@@ -22,7 +22,7 @@ function Basket() {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
 
-  const {items,removeFromBasket}=useBasket();
+  const {items,removeFromBasket,emptyBasket}=useBasket();
   const total=items.reduce((acc,obj)=>acc+obj.price,0)
 
   const handleSubmit=()=>{
@@ -36,8 +36,9 @@ function Basket() {
 
    }
 
-   const response= postOrder(input)
-   console.log(response)
+   postOrder(input)
+   emptyBasket();
+   onClose();
 
   }
 
@@ -62,12 +63,12 @@ function Basket() {
             {
               items.map((item)=>(
 
-                <li key={item.id}>
+                <li key={item._id}>
 
                   <Link to={`/product/${item.id}`}>{item.title}-{item.price} TL
                   <Image htmlWidth={300} htmlHeight={300} borderRadius={'2xl'}   src={item.images[0]} alt="basket item"/>
                   </Link>
-                  <Button colorScheme="pink" size={'md'}   mt={3} onClick={()=>removeFromBasket(item.id)}> Remove from basket</Button>
+                  <Button colorScheme="pink" size={'md'}   mt={3} onClick={()=>removeFromBasket(item._id)}> Remove from basket</Button>
                 </li>
               ))
              

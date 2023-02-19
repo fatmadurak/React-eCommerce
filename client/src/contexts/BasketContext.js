@@ -35,16 +35,22 @@ const AddToBasket=(data,findItem)=>{
 
     const removeFromBasket=(item_id)=>{
 
-    const filtered=items.filter((item)=>item.id!==item_id) 
+    const filtered=items.filter((item)=>item._id!==item_id) 
 
     setItems(filtered)
 
 
     }
 
+
+ const emptyBasket=()=>setItems([]);
+
+
+
+
 const values={items,
     setItems,
-    AddToBasket,removeFromBasket}
+    AddToBasket,removeFromBasket,emptyBasket}
 
 
 
