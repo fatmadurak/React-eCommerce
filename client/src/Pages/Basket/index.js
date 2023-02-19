@@ -12,6 +12,8 @@ function Basket() {
 
   const[address,setAddress]=useState("")
 
+  console.log(address)
+
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const initialRef = React.useRef(null)
@@ -82,7 +84,7 @@ function Basket() {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Address</FormLabel>
-              <Textarea ref={initialRef} placeholder='Address' />
+              <Textarea ref={initialRef} placeholder='Address' value={address} onChange={(e)=>setAddress(e.target.value)} />
             </FormControl>
 
           </ModalBody>
