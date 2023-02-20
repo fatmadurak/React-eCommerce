@@ -9,13 +9,15 @@ import {Alert,Button,Image,Box,Text,  Modal,
   ModalCloseButton,useDisclosure,FormControl,FormLabel,Textarea,  useToast,} from "@chakra-ui/react"
  
 import {Link} from  "react-router-dom"
-
+import { fetchMe } from '../../Api'
 import { postOrder } from '../../Api'
 function Basket() {
 
   const[address,setAddress]=useState("")
+  const[email,setEmail]=useState("")
 
   console.log(address)
+
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -33,6 +35,7 @@ function Basket() {
    const input={
 
     address,
+    email,
     items:JSON.stringify(item_id)
 
    }
@@ -121,6 +124,10 @@ function Basket() {
               <Textarea ref={initialRef} placeholder='Address' value={address} onChange={(e)=>setAddress(e.target.value)} />
             </FormControl>
 
+            <FormControl>
+              <FormLabel>Email</FormLabel>
+              <Textarea ref={initialRef} placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)} />
+            </FormControl>
           </ModalBody>
 
           <ModalFooter>
