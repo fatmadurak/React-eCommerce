@@ -30,7 +30,7 @@ function Admin() {
      <Box mt="50">
             <Routes>
                 <Route  path="/" exact element={<Home/>} />
-                <Route  path="/Home" exact element={<Home/>} />
+                <Route  path="/home" exact element={<Home/>} />
                 <Route path='/products' element={<Products/>}/>
                 <Route path='/orders' element={<Orders/>}/>
                
