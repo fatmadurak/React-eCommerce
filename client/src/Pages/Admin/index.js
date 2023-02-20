@@ -1,7 +1,7 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {NavLink, Routes,Route} from "react-router-dom"
 import "./Styles.css"
-import {Box } from"@chakra-ui/react"
+import {Box,Button} from"@chakra-ui/react"
 import Home from './Home'
 
 function Admin() {
@@ -14,24 +14,23 @@ function Admin() {
      <nav>
       <ul className='admin-menu'>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="home"><Button color="white" backgroundColor="#c0b9">Home</Button></NavLink>
         </li>
         <li>
-          <Link to="/">Products</Link>
+         <NavLink to="/admin/home"><Button color="white" backgroundColor="#c0b9">Products</Button></NavLink>
         </li>
         <li>
-          <Link to="/">Orders</Link>
+        <NavLink to="/admin/home"><Button color="white" backgroundColor="#c0b9">Orders</Button></NavLink>
         </li>
       </ul>
      </nav>
 
-   <Box mt={10}>
-   
-
-
-     
-
-   </Box>
+     <Box mt="20">
+            <Routes>
+                <Route  path="admin/home" exact element={<Home/>} />
+               
+            </Routes>
+        </Box>
     
 
     </div>
