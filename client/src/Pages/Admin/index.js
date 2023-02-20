@@ -1,8 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import "./Styles.css"
+import {Box } from"@chakra-ui/react"
+import Home from './Home'
 
 function Admin() {
+
+
+ 
   return (
     <div>
 
@@ -20,6 +25,14 @@ function Admin() {
       </ul>
      </nav>
 
+   <Box mt={10}>
+   
+
+
+     
+
+   </Box>
+    
 
     </div>
   )
