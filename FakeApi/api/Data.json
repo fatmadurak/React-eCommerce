@@ -235,6 +235,44 @@
         "https://i.dummyjson.com/data/products/13/4.jpg",
         "https://i.dummyjson.com/data/products/13/thumbnail.webp"
       ]
+    },
+    {
+      "id": 14,
+      "title": "Fog Scent Xpressio Perfume",
+      "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+      "price": 13,
+      "discountPercentage": 8.14,
+      "rating": 4.59,
+      "stock": 61,
+      "brand": "Fog Scent Xpressio",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
+      "images": [
+        "https://i.dummyjson.com/data/products/13/1.jpg",
+        "https://i.dummyjson.com/data/products/13/2.png",
+        "https://i.dummyjson.com/data/products/13/3.jpg",
+        "https://i.dummyjson.com/data/products/13/4.jpg",
+        "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Brown Perfume",
+      "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+      "price": 40,
+      "discountPercentage": 15.66,
+      "rating": 4,
+      "stock": 52,
+      "brand": "Royal_Mirage",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/12/1.jpg",
+        "https://i.dummyjson.com/data/products/12/2.jpg",
+        "https://i.dummyjson.com/data/products/12/3.png",
+        "https://i.dummyjson.com/data/products/12/4.jpg",
+        "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
+      ]
     }
   ],
   "users": [
@@ -302,6 +340,12 @@
     },
     {
       "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
     }
   ],
   "orders": [
@@ -334,6 +378,12 @@
       "email": "mervenur@gmail.com",
       "items": "[6,7,8,10]",
       "id": 6
+    },
+    {
+      "address": "Karatay/Konya",
+      "email": "usame@gmail.com",
+      "items": "[1,2,3]",
+      "id": 7
     }
   ]
 }
