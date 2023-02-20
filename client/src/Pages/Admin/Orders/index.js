@@ -1,7 +1,7 @@
 import React from 'react'
 import {useQuery} from "react-query"
 import {fetchOrder} from "../../../Api"
-import {Table,Thead,Tr,Tbody,Th,Td,TableCaption,Text} from "@chakra-ui/react"
+import {Table,Thead,Tr,Tbody,Th,Td,TableCaption,Text, Center} from "@chakra-ui/react"
 
 function Orders() {
 
@@ -29,12 +29,12 @@ function Orders() {
 
 
     <Table variant='simple'>
-    <TableCaption>Imperial to metric conversion factors</TableCaption>
+    <TableCaption paddingRight={100}>Güncel Siparişlerin Yeraldığı Tablo...</TableCaption>
     <Thead>
       <Tr>
         <Th>User</Th>
         <Th>Address</Th>
-        <Th isNumeric>Items</Th>
+        <Th >Items</Th>
       </Tr>
     </Thead>
     <Tbody>
