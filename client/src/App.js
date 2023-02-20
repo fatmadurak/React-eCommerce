@@ -42,7 +42,7 @@ import Admin from "./Pages/Admin";
             }
           />
                 <Route
-            path="/admin"
+            path="/admin/*"
             admin={true}
             element={
               <ProtectedRoute>
