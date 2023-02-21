@@ -2,6 +2,7 @@ import React from 'react'
 import query, { useQuery } from "react-query"
 import { fetchProducts } from '../../../Api'
 import { Table } from 'antd';
+import { Link } from 'react-router-dom';
 
 function Products() {
 
@@ -35,8 +36,12 @@ function Products() {
   },
   {
     title: 'action',
-    dataIndex: 'action',
     key: 'action',
+    render:(text,record)=>(
+  
+      <Link to={`/admin/products/${record._id}`}>Edit</Link>
+
+    ),
   },
 ];
 
