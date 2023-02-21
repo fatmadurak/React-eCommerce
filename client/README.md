@@ -10,7 +10,9 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 * UI tasarımda: [Chakra UI](https://chakra-ui.com/) ve [Ant Design](https://ant.design/) kullanıldı.
 
 
-![e-commerce](/public/assets/Anasayfa_.PNG)
+![alt text](http://url/to/img.png)
+
+![e-commerce](http://public/assets/Anasayfa_.PNG)
 ![e-commerce](/public/assets/urundetayi.PNG)
 ![e-commerce](/public/assets/KayıtEkranı.PNG)
 ![e-commerce](/public/assets/loginEkrani.PNG)
