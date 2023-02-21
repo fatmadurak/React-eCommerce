@@ -10,16 +10,12 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 * UI tasarımda: [Chakra UI](https://chakra-ui.com/) ve [Ant Design](https://ant.design/) kullanıldı.
 
 
-![alt text](http://public/assets/Anasayfa_.PNG)
-
-![e-commerce](http://public/assets/Anasayfa_.PNG)
-![e-commerce](/public/assets/urundetayi.PNG)
-![e-commerce](/public/assets/KayıtEkranı.PNG)
-![e-commerce](/public/assets/loginEkrani.PNG)
-![e-commerce](/public/assets/profile.PNG)
-![e-commerce](/public/assets/sepet.PNG)
-![e-commerce](/public/assets/siparis.PNG)
-![e-commerce](/public/assets/siparis2.PNG)
-
 
 <img src="public/assets/Anasayfa_.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/urundetayi.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/KayıtEkranı.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/loginEkrani.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/profile.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/sepet.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/siparis.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/siparis2.PNG" alt="alt text" width="320" height="180">
