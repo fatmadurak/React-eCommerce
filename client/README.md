@@ -12,7 +12,7 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 
 
 <img src="public/assets/Anasayfa_.PNG" alt="alt text" width="1500" height="1500">
-<img src="public/assets/urundetayi.PNG" alt="alt text" width="320" height="180">
+<img src="public/assets/urundetayi.PNG" alt="alt text" width="500" height="500">
 <img src="public/assets/KayıtEkranı.PNG" alt="alt text" width="320" height="180">
 <img src="public/assets/loginEkrani.PNG" alt="alt text" width="320" height="180">
 <img src="public/assets/profile.PNG" alt="alt text" width="320" height="180">
