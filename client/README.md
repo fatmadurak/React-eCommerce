@@ -22,3 +22,4 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 ![e-commerce](/public/assets/siparis2.PNG)
 
 
+<img src="public/assets/Anasayfa_.PNG" alt="alt text" width="320" height="180">
