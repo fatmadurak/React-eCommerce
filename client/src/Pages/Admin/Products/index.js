@@ -22,31 +22,32 @@ function Products() {
         </div>
  }
 
-
-
-const columns = [
+ const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
+    title: 'title',
+    dataIndex: 'title',
+    key: 'title',
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'price',
+    dataIndex: 'price',
+    key: 'price',
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
+    title: 'action',
+    dataIndex: 'action',
+    key: 'action',
   },
 ];
+
 
 
   return (
 
 
-     <Table dataSource={data} columns={columns} />
+ <div>
+  <Table dataSource={data} columns={columns} rowKey="id"/>;
+ </div>
 
 
   )

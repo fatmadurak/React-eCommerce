@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 import {AuthProvider} from "./contexts/AuthContext"
 import { BasketProvider } from './contexts/BasketContext';
 import "./index.css";
-
+import 'antd/dist/reset.css';
 
 const queryClient = new QueryClient()
 
