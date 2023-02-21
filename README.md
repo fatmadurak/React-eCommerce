@@ -1,4 +1,4 @@
-# e-commerce
+
 # React-eCommerceApp
 Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 * ```MockAPI``` ile fake JSON dosyası oluşturularak veriler axios ile çekildi. [https://mockapi.io](https://mockapi.io)
