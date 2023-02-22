@@ -1,13 +1,21 @@
 import React, { useMemo } from 'react'
-import query, { useMutation, useQuery } from "react-query"
-import { fetchProducts } from '../../../Api'
+import query, {useMutation, useQuery,useQueryClient } from "react-query"
+import { fetchProducts,deleteProduct } from '../../../Api'
 import { Table,Popconfirm } from 'antd';
 import { Link } from 'react-router-dom';
 
 function Products() {
 
+  const queryClient=useQueryClient();
+
  const{isLoading,isError,data,error}=useQuery("admin:products",fetchProducts)
 
+
+ const deleteMutation=useMutation(deleteProduct,{
+
+ onSuccess:()=>queryClient.invalidateQueries("admin:products")
+
+ },)
 
 
 
@@ -29,15 +37,17 @@ function Products() {
       key: 'action',
       render:(record)=>(
         <>
-        <Link to={`/admin/products/${record._id}`}>Edit</Link>
+        <Link to={`/admin/products/${record.id}`}>Edit</Link>
   
         <Popconfirm
         title="Are you sure"
   
-        onConfirm={()=>{
-    
-  
-  
+        onConfirm={() => {
+          deleteMutation.mutate(record.id, {
+            onSuccess: () => {
+              console.log("silindi");
+            },
+          });
         }}
   
         onCancel={()=>console.log("iptal edildi")}
@@ -56,7 +66,7 @@ function Products() {
     },
   ];
  },[])
- 
+
  if (isLoading) {
   
   return <div>
