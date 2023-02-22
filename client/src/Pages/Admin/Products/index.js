@@ -1,5 +1,5 @@
 import React from 'react'
-import query, { useQuery } from "react-query"
+import query, { useMutation, useQuery } from "react-query"
 import { fetchProducts } from '../../../Api'
 import { Table } from 'antd';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,14 @@ import { Link } from 'react-router-dom';
 function Products() {
 
  const{isLoading,isError,data,error}=useQuery("admin:products",fetchProducts)
+
+ const deleteMutation=useMutation(deleteProduct,{
+
+
+ 
+
+
+ })
 
  if (isLoading) {
   
@@ -37,7 +45,7 @@ function Products() {
   {
     title: 'action',
     key: 'action',
-    render:(text,record)=>(
+    render:(record)=>(
   
       <Link to={`/admin/products/${record._id}`}>Edit</Link>
 

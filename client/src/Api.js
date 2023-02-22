@@ -100,3 +100,12 @@ export const fetchOrder=async()=>{
 
 }
 
+
+export const deleteProduct=async()=>{
+
+const {data}=await axios.delete(`${process.env.REACT_APP_BASE_ENDPOINT}/products/${product_id}`)
+
+return data;
+
+}
+
