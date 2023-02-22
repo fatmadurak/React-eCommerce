@@ -15,7 +15,6 @@ import { Flex,Spinner } from '@chakra-ui/react'
     const[loading,setLoading]=useState(true);
 
 
-
     //kullanıcıardaki mail localstoragedaki maile eşitse giriş yapmış oluyor
    useEffect(()=>{
 
