@@ -1,10 +1,11 @@
 import React from 'react'
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom'
-import { fetchProduct } from '../../../Api';
+import { fetchProduct,updateProduct } from '../../../Api';
 import {Formik,FieldArray} from "formik"
 import { Text,Box, FormControl,FormLabel,Input,Textarea,Button} from '@chakra-ui/react';
-
+import validationSchema from './validation';
+import { message } from 'antd';
 
 function ProductDetail() {
 
@@ -27,9 +28,18 @@ function ProductDetail() {
         </div>
     }
 
-const handleSubmit=()=>{
+const handleSubmit=async(values,bag)=>{
 
-    console.log("submit")
+try {
+    
+    await updateProduct(values,product_id)
+} catch (e) {
+    
+    message.error("the product does  not update")
+
+}
+
+  
 
 
 }
@@ -47,6 +57,8 @@ const handleSubmit=()=>{
     price:data.price,
     images:data.images,
   }}
+
+  validationSchema={validationSchema}
 
   onSubmit={handleSubmit}
 
@@ -69,7 +81,7 @@ const handleSubmit=()=>{
       <FormControl>
 
         <FormLabel>Title </FormLabel>
-        <Input name="title" onChange={handleChange} onBlur={handleBlur} value={values.title} disabled={isSubmitting}/>
+        <Input name="title" onChange={handleChange} onBlur={handleBlur} value={values.title} disabled={isSubmitting} isInvalid={touched.title && errors.title}/>
       </FormControl>
     
 
@@ -77,7 +89,7 @@ const handleSubmit=()=>{
       <FormControl mt={4}>
 
         <FormLabel>Description </FormLabel>
-        <Textarea name="description" onChange={handleChange} onBlur={handleBlur} value={values.description} disabled={isSubmitting}/>
+        <Textarea name="description" onChange={handleChange} onBlur={handleBlur} value={values.description} disabled={isSubmitting} isInvalid={touched.description && errors.description}/>
       </FormControl>
       
 
@@ -85,7 +97,7 @@ const handleSubmit=()=>{
       <FormControl mt={4}>
 
         <FormLabel>Price </FormLabel>
-        <Input name="price" onChange={handleChange} onBlur={handleBlur} value={values.price} disabled={isSubmitting}/>
+        <Input name="price" onChange={handleChange} onBlur={handleBlur} value={values.price} disabled={isSubmitting} isInvalid={touched.price && errors.price}/>
       </FormControl>
 
 
@@ -134,6 +146,8 @@ const handleSubmit=()=>{
 
       </FormControl>
 
+
+     <Button mt={4} width="full" type='submit' isLoading={isSubmitting}> Update</Button>
 
      </form>
 

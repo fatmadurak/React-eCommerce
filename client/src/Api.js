@@ -109,3 +109,11 @@ return data;
 
 }
 
+export const updateProduct=async(input,product_id)=>{
+
+    const {data}=await axios.put(`${process.env.REACT_APP_BASE_ENDPOINT}/products/${product_id}`,input)
+
+    return data;
+
+
+}
