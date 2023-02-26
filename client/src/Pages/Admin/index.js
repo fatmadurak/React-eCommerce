@@ -6,6 +6,8 @@ import Home from './Home'
 import Products from './Products';
 import Orders from './Orders';
 import ProductDetail from './ProductDetail'
+import NewProduct from './Products/New'
+
 
 function Admin() {
 
@@ -31,8 +33,9 @@ function Admin() {
      <Box mt="50">
             <Routes>
                 <Route  path="/" exact element={<Home/>} />
-                <Route  path="/home" exact element={<Home/>} />
+                <Route  path="/home"  element={<Home/>} />
                 <Route path='/products' exact element={<Products/>}/>
+                <Route path='/products/new'  element={<NewProduct/>}/>
                 <Route path='/orders' element={<Orders/>}/>
                 <Route path='/products/:product_id' element={<ProductDetail/>}/>
             </Routes>

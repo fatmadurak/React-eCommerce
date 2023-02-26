@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
 import query, {useMutation, useQuery,useQueryClient } from "react-query"
 import { fetchProducts,deleteProduct } from '../../../Api'
-import { Table,Popconfirm } from 'antd';
+import { Table,Popconfirm} from 'antd';
 import { Link } from 'react-router-dom';
+import { Button, Flex } from '@chakra-ui/react';
 
 function Products() {
 
@@ -87,6 +88,10 @@ function Products() {
 
 
  <div>
+
+   <Flex justifyContent="space-between" alignItems="center" mb="15"> <div>
+    
+   </div><Link to="/admin/products/new"><Button>New</Button></Link></Flex>
   <Table dataSource={data} columns={columns} rowKey="id"/>;
  </div>
 
