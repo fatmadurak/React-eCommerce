@@ -26,7 +26,16 @@ function Basket() {
   const toast = useToast();
 
   const {items,removeFromBasket,emptyBasket}=useBasket();
-  const total=items.reduce((acc,obj)=>acc+obj.price,0)
+  
+  const total = items.reduce((acc, obj) => {
+    if (typeof obj.price === "number") {
+      return acc + obj.price;
+    } else if (typeof obj.price === "string") {
+      return acc + Number(obj.price);
+    } else {
+      return acc;
+    }
+  }, 0);
 
   const handleSubmit=()=>{
 
