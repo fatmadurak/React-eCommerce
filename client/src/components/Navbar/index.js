@@ -42,7 +42,7 @@ function Navbar() {
     loggedIn && (
       <>  
 
-      {items.length >=0 && (
+      {items.length >=0 && user?.role!=="admin" && (
 
         <Link to="/basket"> <Button colorScheme="pink" variant="outline">Basket({items.length})</Button></Link>
       )}
