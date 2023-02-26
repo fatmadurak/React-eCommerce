@@ -117,3 +117,12 @@ export const updateProduct=async(input,product_id)=>{
 
 
 }
+
+
+export const postProduct=async(input)=>
+{
+
+   const {data}=await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/products/`,input)
+ 
+   return data;
+}

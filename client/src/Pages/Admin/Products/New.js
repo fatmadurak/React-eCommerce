@@ -1,18 +1,42 @@
 import React from 'react'
-import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom'
-import { fetchProduct,updateProduct } from '../../../Api';
+import { useMutation,useQueryClient} from 'react-query';
+import { postProduct } from '../../../Api';
 import {Formik,FieldArray} from "formik"
 import { Text,Box, FormControl,FormLabel,Input,Textarea,Button} from '@chakra-ui/react';
 import validationSchema from './Validations';
 import { message } from 'antd';
 
 function NewProduct() {
+ 
+    const queryClient=useQueryClient();
 
-  
+    const newProductMutation=useMutation(postProduct,{
+
+        onSuccess:()=>queryClient.invalidateQueries("admin:products")
+       
+        },)
+       
 const handleSubmit=async(values,bag)=>{
 
 
+    message.loading({content:"Loading...",key:"product_add"})
+
+
+
+    const newValues={
+
+        ...values,
+        image:JSON.stringify(values.image)
+
+
+    }
+
+
+    newProductMutation.mutate(newValues, {
+        onSuccess: () => {
+          console.log("success");
+        },
+    })
   
 
 
@@ -121,7 +145,7 @@ const handleSubmit=async(values,bag)=>{
       </FormControl>
 
 
-     <Button mt={4} width="full" type='submit' isLoading={isSubmitting}> Update</Button>
+     <Button mt={4} width="full" type='submit' isLoading={isSubmitting}> Save</Button>
 
      </form>
 
