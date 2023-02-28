@@ -14,6 +14,6 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 <img src="client/public/assets/sepet.PNG" alt="sepet" width="700" height="300">
 <img src="client/public/assets/siparis.PNG" alt="siparis" width="600" height="200">
 <img src="client/public/assets/siparis2.PNG" alt="siparis2" width="700" height="400">
-<img src="client/public/assets/admin.PNG" alt="admin" width="800" height="400">
-<img src="client/public/assets/adminProduct.PNG" alt="adminProduct" width="800" height="400">
-<img src="client/public/assets/orderList.PNG" alt="orderList" width="800" height="400">
+<img src="client/public/assets/admin.PNG" alt="admin" width="800" height="300">
+<img src="client/public/assets/adminProduct.PNG" alt="adminProduct" width="800" height="300">
+<img src="client/public/assets/orderList.PNG" alt="orderList" width="800" height="300">
