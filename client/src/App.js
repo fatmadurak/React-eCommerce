@@ -27,12 +27,12 @@ import Admin from "./Pages/Admin";
       <div className="content">  
         <Routes>
           <Route path="/" exact element={<Products/>}/>
-          <Route path="/product/:product_id" exact element={<ProductDetails/>}/>
-          <Route path="/signin" exact element={<Signin/>}/>
-          <Route path="/signup" exact element={<Signup/>}/>
-          <Route path="/profile" exact element={<Profile/>}/>
-          <Route path="/basket" exact element={<Basket/>}/>
-          <Route path="/*" exact element={<Error404/>}/>
+          <Route path="/product/:product_id"  element={<ProductDetails/>}/>
+          <Route path="/signin"  element={<Signin/>}/>
+          <Route path="/signup"  element={<Signup/>}/>
+          <Route path="/profile"  element={<Profile/>}/>
+          <Route path="/basket"  element={<Basket/>}/>
+          <Route path="/*"  element={<Error404/>}/>
           <Route
             path="/profile"
             element={
