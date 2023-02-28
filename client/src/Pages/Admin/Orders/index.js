@@ -21,7 +21,7 @@ function Orders() {
       </div>
     }
 
-    console.log(data)
+    
   return (
     <div>
 
