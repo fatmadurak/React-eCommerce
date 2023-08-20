@@ -6,6 +6,7 @@ Turkcell Geleceği Yazanlar React modülü "E-Commerce" çalışması.
 * Yeni üye girişi ve kayıt olunmuşsa giriş yapabilme, profil sayfasında profil bilgilerine erişebilme, sepete ürün ekleme, sepetten kaldırma, sipariş verebilme , sepete eklenen ürünler ```local storage ```'a kaydolmaktadır, ürün detayını görebilme,  çıkış yapıldığında ana sayfaya yönlendirme özellikleri aktif çalışmaktadır. 
 * UI tasarımda: [Chakra UI](https://chakra-ui.com/) ve [Ant Design](https://ant.design/) kullanıldı.
 
+
 <img src="client/public/assets/Anasayfa_.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/urundetayi.PNG" alt="urundetayi" width="600" height="400">
 <img src="client/public/assets/KayıtEkranı.PNG" alt="KayıtEkranı" width="500" height="200">
